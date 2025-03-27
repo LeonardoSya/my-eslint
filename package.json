@@ -1,0 +1,12 @@
+{
+	"scripts": {
+		"test": "mocha tests/lib/rules/*.js"
+	},
+	"dependencies": {
+		"generator-eslint": "^5.1.2"
+	},
+	"devDependencies": {
+		"eslint": "9.23.0",
+		"mocha": "11.1.0"
+	}
+}
