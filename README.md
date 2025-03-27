@@ -97,7 +97,8 @@ eslint的运行流程：解析、遍历、触发回调
 
 如何新增一条规则：`yo eslint:rule`
 
-![image.png](attachment:8cdb865d-8135-49eb-b958-77306e45155b:image.png)
+![image](https://github.com/user-attachments/assets/c3242ad7-bc6f-4b22-83c5-de6dc95c9b76)
+
 
 - plugins和extends的区别
     
