@@ -1,12 +1,24 @@
 {
+	"name": "eslint-plugin-sya",
+	"type": "module",
+	"main": "lib/index.js",
+	"exports": {
+		".": "./lib/index.js"
+	},
 	"scripts": {
 		"test": "mocha tests/lib/rules/*.js"
 	},
 	"dependencies": {
+		"eslint-plugin-sya": "link:../../../Library/pnpm/global/5/node_modules/eslint-plugin-sya",
 		"generator-eslint": "^5.1.2"
 	},
 	"devDependencies": {
 		"eslint": "9.23.0",
 		"mocha": "11.1.0"
+	},
+	"pnpm": {
+		"overrides": {
+			"eslint-plugin-sya": "link:../../../../Library/pnpm/global/5/node_modules/eslint-plugin-sya"
+		}
 	}
 }

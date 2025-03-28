@@ -4,10 +4,16 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  eslint-plugin-sya: link:../../../../Library/pnpm/global/5/node_modules/eslint-plugin-sya
+
 importers:
 
   .:
     dependencies:
+      eslint-plugin-sya:
+        specifier: link:../../../../Library/pnpm/global/5/node_modules/eslint-plugin-sya
+        version: link:../../../../Library/pnpm/global/5/node_modules/eslint-plugin-sya
       generator-eslint:
         specifier: ^5.1.2
         version: 5.1.2(@types/node@22.13.14)(@yeoman/types@1.5.0(@types/node@22.13.14)(@yeoman/adapter@1.6.0)(mem-fs@4.1.2))(mem-fs@4.1.2)(yo@5.1.0(@types/node@22.13.14)(@yeoman/types@1.5.0(@types/node@22.13.14)(@yeoman/adapter@1.6.0)(mem-fs@4.1.2))(mem-fs@4.1.2))
