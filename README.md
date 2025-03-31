@@ -1,3 +1,6 @@
+# eslint-plugin-sya
+[![My Skills](https://skillicons.dev/icons?i=nodejs,babel)](https://skillicons.dev)
+
 ## create
 
 yeoman是一个创建脚手架的工具
@@ -97,8 +100,7 @@ eslint的运行流程：解析、遍历、触发回调
 
 如何新增一条规则：`yo eslint:rule`
 
-![image](https://github.com/user-attachments/assets/c3242ad7-bc6f-4b22-83c5-de6dc95c9b76)
-
+![image](https://github.com/user-attachments/assets/a452bab4-42b7-4797-8057-9065017c6baf)
 
 - plugins和extends的区别
     
@@ -119,3 +121,29 @@ eslint的运行流程：解析、遍历、触发回调
     // 自动启用react-hooks插件的推荐规则集
     extends: ["plugin:react-hooks/recommended"]
     ```
+    
+
+## link & test
+
+发布插件前，先通过link的方式进行软件包测试
+
+在eslint-plugin-utils目录下：`pnpm link eslint-plugin-sya` 这会在本地的 pnpm store 中注册该包，作为可被其他项目链接的源包
+
+在前端仓库目录下：`pnpm link ../eslint-plugin-utils` 注意这里是插件相对于测试仓库的路径，这会在测试仓库的node_modules中创建一个指向插件仓库的软链接并吸入dependencies
+
+⚠️ 注意：不能在 eslint-plugin-utils的子目录中执行link(也就是测试仓库不能放在eslint-plugin-utils目录下)
+
+验证是否成功link：
+
+![image](https://github.com/user-attachments/assets/5108edac-6584-41c4-98bc-7929950c852b)
+![image](https://github.com/user-attachments/assets/82caf1ad-a4eb-4dde-a63d-426e7a882232)
+
+修改eslint.config支持测试插件，然后重启ide，使eslint校验规则生效
+
+![image](https://github.com/user-attachments/assets/3b3b0803-1841-4318-af40-81202248c280)
+
+## publish
+
+`npm login` 
+
+`npm publish`
